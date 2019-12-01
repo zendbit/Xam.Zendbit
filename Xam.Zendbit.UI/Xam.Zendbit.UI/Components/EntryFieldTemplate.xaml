@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<components:TemplateView x:Name="_entryFieldTemplate" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.EntryFieldTemplate" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components" Style="{x:StaticResource EntryTemplateWithBorderStyle}">
+    <components:TemplateView.Content>
+        <StackLayout Spacing="0">
+            <StackLayout x:Name="_entryLabelBackground" Margin="0,2" Padding="2,0" HorizontalOptions="StartAndExpand" BindingContext="{x:Reference _entryFieldTemplate}" BackgroundColor="{x:Binding LabelBackgroundColor}" IsVisible="{x:Binding LabelText, Converter={StaticResource IsStringNotEmpty}}">
+                <components:Label x:Name="_fieldLabel" BindingContext="{x:Reference _entryFieldTemplate}" Text="{x:Binding LabelText}" TextColor="{x:Binding LabelTextColor}" FontSize="{x:Binding LabelFontSize}" Style="{x:StaticResource EntryLabelStyle}" />
+            </StackLayout>
+            <Frame HasShadow="False" Padding="0" BindingContext="{x:Reference _entryFieldTemplate}" BackgroundColor="Transparent" BorderColor="{x:Binding EntryBorderColor}" CornerRadius="{x:Binding EntryCornerRadius}" IsClippedToBounds="True">
+                <ContentView BindingContext="{x:Reference _entryFieldTemplate}" Content="{x:Binding EntryFieldTemplateContent}" />
+            </Frame>
+            <components:Label x:Name="_msgLabel" BindingContext="{x:Reference _entryFieldTemplate}" Text="{x:Binding MsgText}" TextColor="{x:Binding MsgTextColor}" IsVisible="{x:Binding MsgText, Converter={StaticResource IsStringNotEmpty}}" Margin="5" />
+        </StackLayout>
+    </components:TemplateView.Content>
+</components:TemplateView>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.Resources.ViewResources">
+
+    <Color x:Key="TextColorDefault">#717171</Color>
+    <Color x:Key="TextColorWhite">White</Color>
+    <Color x:Key="TextColorBlue">#0A71F5</Color>
+    <Color x:Key="TextColorOrange">#FAA518</Color>
+    <Color x:Key="TextColorGreen">#01C613</Color>
+    <Color x:Key="TextColorRed">#EE0E0E</Color>
+    <Color x:Key="EntryBackgroundColorDefault">#F6F6F6</Color>
+    <Color x:Key="ButtonBackgroundColorTosca">#25C2AB</Color>
+    <Color x:Key="ButtonBackgroundColorBlue">#0A71F5</Color>
+    <Color x:Key="ButtonBackgroundColorRed">#EE0E0E</Color>
+    <Color x:Key="BackgroundColorLightGray">#F6F6F6</Color>
+    <Color x:Key="BackgroundColorGray">#E6E6E6</Color>
+    <Color x:Key="BackgroundColorDarkGray">#5E5E5E</Color>
+    <Color x:Key="BackgroundColorWhite">White</Color>
+    <Color x:Key="LineColorGray">#D6D6D6</Color>
+    <Color x:Key="BackgroundColorLightBlue">#F3F3FF</Color>
+    <Color x:Key="BackgroundColorLightGreen">#EEFFEE</Color>
+    <Color x:Key="BackgroundColorDarkBlue">#34495E</Color>
+    <Color x:Key="BackgroundColorDarkBlueGray">#566573</Color>
+    <Color x:Key="BackgroundColorOrange">#FF9027</Color>
+    <Color x:Key="BackgroundColorDarkBlueOcean">#2980B9</Color>
+    <Color x:Key="BackgroundColorGreenTea">#DAF7A6</Color>
+</ResourceDictionary>

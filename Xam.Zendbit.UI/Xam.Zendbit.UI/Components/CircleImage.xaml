@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<components:TemplateView x:Name="_circleImage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.CircleImage" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components">
+    <components:TemplateView.Content>
+        <Frame IsClippedToBounds="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HasShadow="False" BindingContext="{x:Reference _circleImage}" BorderColor="{x:Binding BorderColor}" Padding="{x:Binding Padding}" CornerRadius="{x:Binding CornerRadius}" BackgroundColor="{x:Binding BackgroundColor}">
+            <Image BindingContext="{x:Reference _circleImage}" Source="{x:Binding Source}" HeightRequest="{x:Binding HeightRequest}" WidthRequest="{x:Binding WidthRequest}" Aspect="{x:Binding Aspect}" />
+        </Frame>
+    </components:TemplateView.Content>
+</components:TemplateView>

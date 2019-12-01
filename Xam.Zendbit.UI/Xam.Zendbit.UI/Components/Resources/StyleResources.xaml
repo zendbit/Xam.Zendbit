@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.Resources.StyleResources" xmlns:component_resources="clr-namespace:Xam.Zendbit.UI.Components.Resources" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components">
+    <ResourceDictionary.MergedDictionaries>
+        <component_resources:ViewResources />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="FlyoutBackgroundOverlayStyle" TargetType="BoxView">
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColorDarkGray}" />
+        <Setter Property="Opacity" Value="0.5" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="FlyoutStyle" TargetType="StackLayout">
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="WidthRequest" Value="280" />
+        <Setter Property="Spacing" Value="0" />
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColorLightGray}" />
+    </Style>
+
+    <Style x:Key="HorizontalLineStyle" TargetType="BoxView">
+        <Setter Property="HeightRequest" Value="1" />
+        <Setter Property="BackgroundColor" Value="{StaticResource LineColorGray}" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+    </Style>
+
+    <Style x:Key="VerticalLineStyle" TargetType="BoxView">
+        <Setter Property="WidthRequest" Value="1" />
+        <Setter Property="BackgroundColor" Value="{StaticResource LineColorGray}" />
+        <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="ErrMessage" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource TextColorRed}" />
+    </Style>
+
+    <Style x:Key="NavigationTextStyle" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="TextColor" Value="{StaticResource TextColorDefault}" />
+    </Style>
+
+    <Style x:Key="EntryStyle" TargetType="Entry">
+        <Setter Property="BackgroundColor" Value="{StaticResource EntryBackgroundColorDefault}" />
+        <Setter Property="TextColor" Value="{StaticResource TextColorDefault}" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource TextColorDefault}" />
+    </Style>
+
+    <Style x:Key="DatePickerStyle" TargetType="DatePicker">
+        <Setter Property="BackgroundColor" Value="{StaticResource EntryBackgroundColorDefault}" />
+        <Setter Property="TextColor" Value="{StaticResource TextColorDefault}" />
+        <Setter Property="Format" Value="dd-MM-yyyy" />
+    </Style>
+
+    <Style x:Key="LinkTextBlueStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource TextColorBlue}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+
+    <Style x:Key="ButtonToscaStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColorTosca}" />
+        <Setter Property="TextColor" Value="{StaticResource TextColorWhite}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="0" />
+    </Style>
+
+    <Style x:Key="ButtonRedStyle" TargetType="Button" BasedOn="{x:StaticResource ButtonToscaStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColorRed}" />
+    </Style>
+
+    <Style x:Key="ButtonBlueStyle" TargetType="Button" BasedOn="{x:StaticResource ButtonToscaStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColorBlue}" />
+    </Style>
+
+    <Style x:Key="Button2ToscaStyle" TargetType="components:Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColorTosca}" />
+        <Setter Property="TextColor" Value="{StaticResource TextColorWhite}" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="MinimumWidthRequest" Value="100" />
+    </Style>
+
+    <Style x:Key="Button2RedStyle" TargetType="components:Button" BasedOn="{x:StaticResource Button2ToscaStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColorRed}" />
+    </Style>
+
+    <Style x:Key="Button2BlueStyle" TargetType="components:Button" BasedOn="{x:StaticResource Button2ToscaStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColorBlue}" />
+    </Style>
+
+    <Style x:Key="Button2DarkBlueStyle" TargetType="components:Button" BasedOn="{x:StaticResource Button2ToscaStyle}">
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColorDarkBlue}" />
+    </Style>
+
+    <Style x:Key="XGrayIconStyle" TargetType="Image">
+        <Setter Property="Source" Value="x_gray_icon" />
+        <Setter Property="HeightRequest" Value="15" />
+        <Setter Property="WidthRequest" Value="15" />
+    </Style>
+
+    <Style x:Key="NavigationMenuStyle" TargetType="Image">
+        <Setter Property="HeightRequest" Value="20" />
+        <Setter Property="WidthRequest" Value="20" />
+    </Style>
+
+    <Style x:Key="DefaultEditorStyle" TargetType="components:EditorField">
+        <Setter Property="LabelBackgroundColor" Value="Transparent" />
+        <Setter Property="EditorTextColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="EditorPlaceholderColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="LabelTextColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="EditorFocusBackgroundColor" Value="{x:StaticResource BackgroundColorLightGreen}" />
+        <Setter Property="EditorDisabledBackgroundColor" Value="{x:StaticResource BackgroundColorGray}" />
+        <Setter Property="MsgTextColor" Value="{x:StaticResource TextColorRed}" />
+        <Setter Property="HeightRequest" Value="90" />
+    </Style>
+
+    <Style x:Key="EditorWithBorderStyle" TargetType="components:EditorField" BasedOn="{x:StaticResource DefaultEditorStyle}">
+        <Setter Property="EditorBorderColor" Value="{x:StaticResource BackgroundColorGray}" />
+    </Style>
+
+    <Style x:Key="DefaultEntryStyle" TargetType="components:EntryField">
+        <Setter Property="LabelBackgroundColor" Value="Transparent" />
+        <Setter Property="EntryTextColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="EntryPlaceholderColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="LabelTextColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="EntryFocusBackgroundColor" Value="{x:StaticResource BackgroundColorLightGreen}" />
+        <Setter Property="EntryDisabledBackgroundColor" Value="{x:StaticResource BackgroundColorGray}" />
+        <Setter Property="MsgTextColor" Value="{x:StaticResource TextColorRed}" />
+        <Setter Property="HeightRequest" Value="45" />
+    </Style>
+
+    <Style x:Key="EntryWithBorderStyle" TargetType="components:EntryField" BasedOn="{x:StaticResource DefaultEntryStyle}">
+        <Setter Property="EntryBorderColor" Value="{x:StaticResource BackgroundColorGray}" />
+    </Style>
+
+    <Style x:Key="DefaultEntryTemplateStyle" TargetType="components:EntryFieldTemplate">
+        <Setter Property="LabelBackgroundColor" Value="Transparent" />
+        <Setter Property="LabelTextColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="MsgTextColor" Value="{x:StaticResource TextColorRed}" />
+        <Setter Property="HeightRequest" Value="45" />
+    </Style>
+
+    <Style x:Key="EntryTemplateWithBorderStyle" TargetType="components:EntryFieldTemplate" BasedOn="{x:StaticResource DefaultEntryTemplateStyle}">
+        <Setter Property="EntryBorderColor" Value="{x:StaticResource BackgroundColorGray}" />
+    </Style>
+
+    <Style x:Key="DateEntryDefaultStyle" TargetType="components:DatePickerField">
+        <Setter Property="LabelBackgroundColor" Value="Transparent" />
+        <Setter Property="LabelTextColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="DateTextColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="DateFocusBackgroundColor" Value="{x:StaticResource BackgroundColorLightGreen}" />
+        <Setter Property="DateDisabledBackgroundColor" Value="{x:StaticResource BackgroundColorGray}" />
+        <Setter Property="MsgTextColor" Value="{x:StaticResource TextColorRed}" />
+        <Setter Property="HeightRequest" Value="45" />
+    </Style>
+
+    <Style x:Key="DateEntryWithBorderStyle" TargetType="components:DatePickerField" BasedOn="{x:StaticResource DateEntryDefaultStyle}">
+        <Setter Property="DateBorderColor" Value="{x:StaticResource BackgroundColorGray}" />
+    </Style>
+
+    <Style x:Key="TimeEntryDefaultStyle" TargetType="components:TimePickerField">
+        <Setter Property="LabelBackgroundColor" Value="Transparent" />
+        <Setter Property="LabelTextColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="TimeTextColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="TimeFocusBackgroundColor" Value="{x:StaticResource BackgroundColorLightGreen}" />
+        <Setter Property="TimeDisabledBackgroundColor" Value="{x:StaticResource BackgroundColorGray}" />
+        <Setter Property="MsgTextColor" Value="{x:StaticResource TextColorRed}" />
+        <Setter Property="HeightRequest" Value="45" />
+    </Style>
+
+    <Style x:Key="TimeEntryWithBorderStyle" TargetType="components:TimePickerField" BasedOn="{x:StaticResource TimeEntryDefaultStyle}">
+        <Setter Property="TimeBorderColor" Value="{x:StaticResource BackgroundColorGray}" />
+    </Style>
+
+    <Style x:Key="PickerEntryDefaultStyle" TargetType="components:PickerField">
+        <Setter Property="LabelBackgroundColor" Value="Transparent" />
+        <Setter Property="LabelTextColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="PickerTextColor" Value="{x:StaticResource TextColorDefault}" />
+        <Setter Property="PickerFocusBackgroundColor" Value="{x:StaticResource BackgroundColorLightGreen}" />
+        <Setter Property="PickerDisabledBackgroundColor" Value="{x:StaticResource BackgroundColorGray}" />
+        <Setter Property="MsgTextColor" Value="{x:StaticResource TextColorRed}" />
+        <Setter Property="HeightRequest" Value="45" />
+    </Style>
+
+    <Style x:Key="PickerEntryWithBorderStyle" TargetType="components:PickerField" BasedOn="{x:StaticResource PickerEntryDefaultStyle}">
+        <Setter Property="PickerBorderColor" Value="{x:StaticResource BackgroundColorGray}" />
+    </Style>
+
+    <Style x:Key="EntryLabelStyle" TargetType="Label">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{x:StaticResource TextColorDefault}" />
+    </Style>
+
+    <Style x:Key="DetailsPageStyle" TargetType="components:DetailsPage">
+        <Setter Property="MenuIcon" Value="menu_icon" />
+        <Setter Property="NavigationBackgroundColor" Value="{x:StaticResource BackgroundColorDarkBlue}" />
+        <Setter Property="NavigationTextColor" Value="{x:StaticResource TextColorWhite}" />
+        <Setter Property="FlyoutBackgroundColor" Value="{x:StaticResource BackgroundColorWhite}" />
+        <Setter Property="BackgroundColor" Value="{x:StaticResource BackgroundColorWhite}" />
+    </Style>
+
+    <Style x:Key="ModalPageStyle" TargetType="components:ModalPage">
+        <Setter Property="BackIcon" Value="back_icon" />
+        <Setter Property="NavigationBackgroundColor" Value="{x:StaticResource BackgroundColorDarkBlue}" />
+        <Setter Property="NavigationTextColor" Value="{x:StaticResource TextColorWhite}" />
+        <Setter Property="ActivityTextColor" Value="{x:StaticResource TextColorWhite}" />
+        <Setter Property="ActivityBackgroundColor" Value="{x:StaticResource BackgroundColorDarkBlue}" />
+        <Setter Property="BackgroundColor" Value="{x:StaticResource BackgroundColorWhite}" />
+    </Style>
+
+    <Style x:Key="TemplateViewStyle" TargetType="components:TemplateView">
+        <Setter Property="BackgroundColor" Value="{x:StaticResource BackgroundColorWhite}" />
+    </Style>
+
+    <Style x:Key="TemplatePageStyle" TargetType="components:TemplatePage">
+        <Setter Property="BackgroundColor" Value="{x:StaticResource BackgroundColorWhite}" />
+    </Style>
+
+    <Style x:Key="AlertViewStyle" TargetType="components:PopUpView">
+        <Setter Property="BackgroundColor" Value="{x:StaticResource BackgroundColorWhite}" />
+        <Setter Property="NavigationBackgroundColor" Value="{x:StaticResource BackgroundColorDarkBlue}" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="NavigationTextColor" Value="{x:StaticResource TextColorWhite}" />
+        <Setter Property="NavigationCloseIcon" Value="x_white_icon" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+        <Setter Property="VerticalOptions" Value="StartAndExpand" />
+        <Setter Property="Padding" Value="30,60,30,30" />
+    </Style>
+</ResourceDictionary>

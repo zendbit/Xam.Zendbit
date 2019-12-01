@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<components:TemplatePage x:Name="_modalPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.ModalPage" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components" Style="{x:StaticResource ModalPageStyle}">
+    <components:TemplatePage.TemplatePageContent>
+        <Grid Grid.Column="0" Grid.Row="0" RowSpacing="0" BindingContext="{x:Reference _modalPage}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{x:Binding PaddingOnPlafroms}" />
+                <RowDefinition Height="{x:Binding NavigationHeight}" />
+                <RowDefinition Height="1" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <BoxView Grid.Column="0" Grid.Row="0" BindingContext="{x:Reference _modalPage}" BackgroundColor="{x:Binding NavigationBackgroundColor}" />
+            <BoxView Grid.Column="0" Grid.Row="1" BindingContext="{x:Reference _modalPage}" BackgroundColor="{x:Binding NavigationBackgroundColor}" />
+            <StackLayout Grid.Column="0" Grid.Row="1" Spacing="15" Padding="10" Orientation="Horizontal">
+                <Image WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" x:Name="_backIcon" ClassId="_backIcon" BindingContext="{x:Reference _modalPage}" Style="{StaticResource NavigationMenuStyle}" Source="{Binding BackIcon}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ElementTappedCmd}" CommandParameter="{x:Reference _backIcon}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <components:Label x:Name="_navigationTextLabel" Style="{StaticResource NavigationTextStyle}" BindingContext="{x:Reference _modalPage}" Text="{x:Binding NavigationText}" FontSize="{x:Binding NavigationTextFontSize}" TextColor="{x:Binding NavigationTextColor}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                <ContentView BindingContext="{x:Reference _modalPage}" Content="{x:Binding NavigationRightContent}" HorizontalOptions="End" VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+            <components:HorizontalLine Grid.Column="0" Grid.Row="2" />
+            <Grid Grid.Column="0" Grid.Row="3" VerticalOptions="FillAndExpand">
+                <ContentView Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BindingContext="{x:Reference _modalPage}" Content="{x:Binding ModalContent}" />
+                <Frame Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" InputTransparent="True" Padding="10" Margin="15" HasShadow="False" CornerRadius="5" BackgroundColor="{x:Binding ActivityBackgroundColor}" BindingContext="{x:Reference _modalPage}" IsVisible="{x:Binding IsActivityRunning}">
+                    <components:Label x:Name="_activityTextLabel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="{x:Binding ActivityTextColor}" BindingContext="{x:Reference _modalPage}" Text="{x:Binding ActivityText}" />
+                </Frame>
+            </Grid>
+        </Grid>
+    </components:TemplatePage.TemplatePageContent>
+</components:TemplatePage>

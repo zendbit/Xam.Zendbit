@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.Resources.ConverterResources" xmlns:converter="clr-namespace:Xam.Zendbit.UI.Components">
+
+    <converter:IsStringEmptyConverter x:Key="IsStringEmpty" />
+    <converter:IsStringNotEmptyConverter x:Key="IsStringNotEmpty" />
+    <converter:BoolToColorConverter x:Key="BoolToColor" />
+    <converter:EmptyStringToDashConverter x:Key="EmptyStringToDash" />
+    <converter:LocalizeStringDatetimeConverter x:Key="LocalizeStringDatetime" />
+    <converter:InversBoolConverter x:Key="InversBool" />
+    <converter:StringSelectorConverter x:Key="StringSelector" />
+    <converter:IsLessThanOrEqualConverter x:Key="IsLessThanOrEqual" />
+    <converter:IsLessThanConverter x:Key="IsLessThan" />
+    <converter:ReplaceStringConverter x:Key="ReplaceString" />
+    <converter:MeterToKMConverter x:Key="MeterToKM" />
+    <converter:StringToDoubleConverter x:Key="StringToDouble" />
+    <converter:IsNullConverter x:Key="IsNull" />
+    <converter:IsNotNullConverter x:Key="IsNotNull" />
+    <converter:IsListNotEmptyConverter x:Key="IsListNotEmpty" />
+</ResourceDictionary>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<components:TemplateView x:Name="_popUpView" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.PopUpView" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components">
+    <components:TemplateView.Content>
+        <Frame HasShadow="False" Padding="0" IsClippedToBounds="True" BackgroundColor="Transparent" BindingContext="{x:Reference _popUpView}" CornerRadius="{x:Binding CornerRadius}">
+            <Grid RowSpacing="0" BindingContext="{x:Reference _popUpView}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{x:Binding NavigationHeight}" />
+                    <RowDefinition Height="1" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Column="0" Grid.Row="0" Padding="10,5" BindingContext="{x:Reference _popUpView}" BackgroundColor="{x:Binding NavigationBackgroundColor}">
+                    <components:Label x:Name="_navigationTextLabel" Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Style="{StaticResource NavigationTextStyle}" BindingContext="{x:Reference _popUpView}" TextColor="{x:Binding NavigationTextColor}" Text="{x:Binding NavigationText}" FontSize="{x:Binding NavigationTextFontSize}" />
+                    <Image Grid.Column="0" Grid.Row="0" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" x:Name="_closeIcon" ClassId="_closeIcon" BindingContext="{x:Reference _popUpView}" Style="{StaticResource NavigationMenuStyle}" Source="{x:Binding NavigationCloseIcon}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ElementTappedCmd}" CommandParameter="{x:Reference _closeIcon}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+                <components:HorizontalLine Grid.Column="0" Grid.Row="1" />
+                <ContentView Grid.Column="0" Grid.Row="2" BindingContext="{x:Reference _popUpView}" BackgroundColor="{x:Binding BackgroundColor}" Content="{x:Binding PopUpContent}" />
+            </Grid>
+        </Frame>
+    </components:TemplateView.Content>
+</components:TemplateView>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<components:TemplateView x:Name="_horizontalLine" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.HorizontalLine" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components">
+    <components:TemplateView.Content>
+        <BoxView x:Name="_hLine" Style="{StaticResource HorizontalLineStyle}" />
+    </components:TemplateView.Content>
+</components:TemplateView>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<components:TemplatePage x:Name="_detailsPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.DetailsPage" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components" Style="{x:StaticResource DetailsPageStyle}">
+    <components:TemplatePage.TemplatePageContent>
+        <Grid>
+            <Grid Grid.Column="0" Grid.Row="0" RowSpacing="0" BindingContext="{x:Reference _detailsPage}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{x:Binding PaddingOnPlafroms}" />
+                    <RowDefinition Height="{x:Binding NavigationHeight}" />
+                    <RowDefinition Height="1" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <BoxView Grid.Column="0" Grid.Row="0" BindingContext="{x:Reference _detailsPage}" BackgroundColor="{x:Binding NavigationBackgroundColor}" />
+                <BoxView Grid.Column="0" Grid.Row="1" BindingContext="{x:Reference _detailsPage}" BackgroundColor="{x:Binding NavigationBackgroundColor}" />
+                <StackLayout Grid.Column="0" Grid.Row="1" Spacing="15" Padding="10" Orientation="Horizontal">
+                    <Image WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" x:Name="_menuIcon" ClassId="_menuIcon" BindingContext="{x:Reference _detailsPage}" Style="{StaticResource NavigationMenuStyle}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ElementTappedCmd}" CommandParameter="{x:Reference _menuIcon}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <components:Label x:Name="_navigationTextLabel" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BindingContext="{x:Reference _detailsPage}" Text="{x:Binding NavigationText}" TextColor="{x:Binding NavigationTextColor}" FontSize="{x:Binding NavigationTextFontSize}" Style="{StaticResource NavigationTextStyle}" />
+                    <ContentView HorizontalOptions="End" VerticalOptions="CenterAndExpand" BindingContext="{x:Reference _detailsPage}" Content="{x:Binding NavigationRightContent}" />
+                </StackLayout>
+                <components:HorizontalLine Grid.Column="0" Grid.Row="2" />
+                <ContentView Grid.Column="0" Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BindingContext="{x:Reference _detailsPage}" Content="{x:Binding DetailsContent}" />
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="0" BindingContext="{x:Reference _detailsPage}" IsVisible="{Binding ToggleFlyout}">
+                <BoxView Grid.Column="0" Grid.Row="0" x:Name="_flyoutBgOverlay" ClassId="_flyoutBgOverlay" BindingContext="{x:Reference _detailsPage}" Style="{StaticResource FlyoutBackgroundOverlayStyle}">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ElementTappedCmd}" CommandParameter="{x:Reference _flyoutBgOverlay}" />
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+                <StackLayout Grid.Column="0" Grid.Row="0" BindingContext="{x:Reference _detailsPage}" BackgroundColor="{x:Binding FlyoutBackgroundColor}" Style="{StaticResource FlyoutStyle}">
+                    <ContentView VerticalOptions="FillAndExpand" BindingContext="{x:Reference _detailsPage}" Content="{x:Binding FlyoutContent}" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </components:TemplatePage.TemplatePageContent>
+</components:TemplatePage>

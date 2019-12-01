@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.Zendbit.UI", "Xam.Zendbit.UI\Xam.Zendbit.UI.csproj", "{DBF45A12-FEC5-4A9A-8C75-923A88E6A627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.Zendbit.UI.iOS", "Xam.Zendbit.UI.iOS\Xam.Zendbit.UI.iOS.csproj", "{04E1F7F8-0FD6-42E2-A12F-1F69BC59D665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.Zendbit.UI.Android", "Xam.Zendbit.UI.Android\Xam.Zendbit.UI.Android.csproj", "{84C320C0-DF2D-4FA8-BF84-73BE970944A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBF45A12-FEC5-4A9A-8C75-923A88E6A627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF45A12-FEC5-4A9A-8C75-923A88E6A627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF45A12-FEC5-4A9A-8C75-923A88E6A627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF45A12-FEC5-4A9A-8C75-923A88E6A627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E1F7F8-0FD6-42E2-A12F-1F69BC59D665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E1F7F8-0FD6-42E2-A12F-1F69BC59D665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E1F7F8-0FD6-42E2-A12F-1F69BC59D665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E1F7F8-0FD6-42E2-A12F-1F69BC59D665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C320C0-DF2D-4FA8-BF84-73BE970944A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C320C0-DF2D-4FA8-BF84-73BE970944A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C320C0-DF2D-4FA8-BF84-73BE970944A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C320C0-DF2D-4FA8-BF84-73BE970944A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

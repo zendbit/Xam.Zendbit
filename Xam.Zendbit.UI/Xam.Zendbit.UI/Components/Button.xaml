@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Frame x:Name="_button" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.Button" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components" Style="{x:StaticResource Button2ToscaStyle}" HasShadow="False" IsClippedToBounds="True">
+    <components:Label x:Name="_buttonLabel" BindingContext="{x:Reference _button}" Text="{x:Binding Text}" TextColor="{x:Binding TextColor}" FontAttributes="{x:Binding FontAttributes}" FontSize="{x:Binding FontSize}" LineBreakMode="{x:Binding LineBreakMode}" FontFamily="{x:Binding FontFamily}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+    <Frame.GestureRecognizers>
+        <TapGestureRecognizer BindingContext="{x:Reference _button}" Command="{x:Binding ElementTappedCmd}" CommandParameter="{x:Binding CommandParameter}" />
+    </Frame.GestureRecognizers>
+</Frame>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<components:TemplateView x:Name="_cardView" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.CardView" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components">
+    <components:TemplateView.Content>
+        <Grid VerticalOptions="FillAndExpand" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <components:EntryField EntryPlaceholder="Search" Grid.Column="0" Grid.Row="0" BindingContext="{x:Reference _cardView}" IsVisible="{x:Binding UseSearch}" />
+            <ScrollView Grid.Column="0" Grid.Row="1" VerticalOptions="FillAndExpand">
+                <FlexLayout x:Name="_cardViewLayout" JustifyContent="{x:Binding JustifyContent}" Wrap="Wrap" BindingContext="{x:Reference _cardView}" Style="{x:Binding Style}">
+                </FlexLayout>
+            </ScrollView>
+        </Grid>
+    </components:TemplateView.Content>
+</components:TemplateView>

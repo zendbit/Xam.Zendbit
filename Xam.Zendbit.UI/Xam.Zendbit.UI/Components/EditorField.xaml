@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<components:TemplateView x:Name="_editorField" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.EditorField" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components" Style="{x:StaticResource EditorWithBorderStyle}">
+    <components:TemplateView.Content>
+        <StackLayout Spacing="0">
+            <StackLayout x:Name="_editorLabelBackground" Margin="0,2" Padding="2,0" HorizontalOptions="StartAndExpand" BindingContext="{x:Reference _editorField}" BackgroundColor="{x:Binding LabelBackgroundColor}" IsVisible="{x:Binding LabelText, Converter={StaticResource IsStringNotEmpty}}">
+                <components:Label x:Name="_fieldLabel" BindingContext="{x:Reference _editorField}" Text="{x:Binding LabelText}" TextColor="{x:Binding LabelTextColor}" FontSize="{x:Binding LabelFontSize}" Style="{x:StaticResource EntryLabelStyle}" />
+            </StackLayout>
+            <Frame HasShadow="False" Padding="0" BindingContext="{x:Reference _editorField}" BackgroundColor="Transparent" BorderColor="{x:Binding EditorBorderColor}" CornerRadius="{x:Binding EditorCornerRadius}" IsClippedToBounds="True">
+                <components:Editor x:Name="_editor" AutoSize="{x:Binding AutoSize}" BindingContext="{x:Reference _editorField}" Text="{x:Binding EditorText}" Placeholder="{x:Binding EditorPlaceholder, Mode=TwoWay}" TextColor="{x:Binding EditorTextColor}" PlaceholderColor="{x:Binding EditorPlaceholderColor}" Keyboard="{x:Binding EditorKeyboard}" Focused="EditorFocusedEvent" Unfocused="EditorFocusedEvent" BackgroundColor="{x:Binding EditorBackgroundColor}" TextChanged="TextChangedEvent" FontSize="{x:Binding EditorFontSize}" HeightRequest="{x:Binding HeightRequest}" WidthRequest="{x:Binding WidthRequest}" />
+            </Frame>
+            <components:Label x:Name="_msgLabel" BindingContext="{x:Reference _editorField}" Text="{x:Binding MsgText}" TextColor="{x:Binding MsgTextColor}" IsVisible="{x:Binding MsgText, Converter={StaticResource IsStringNotEmpty}}" Margin="5" />
+        </StackLayout>
+    </components:TemplateView.Content>
+</components:TemplateView>

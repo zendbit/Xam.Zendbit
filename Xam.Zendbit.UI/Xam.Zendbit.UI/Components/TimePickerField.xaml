@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<components:TemplateView x:Name="_timePickerField" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.TimePickerField" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components" Style="{x:StaticResource TimeEntryWithBorderStyle}">
+    <components:TemplateView.Content>
+        <StackLayout Spacing="0">
+            <StackLayout Margin="0,2" Padding="2,0" HorizontalOptions="StartAndExpand" BindingContext="{x:Reference _timePickerField}" IsVisible="{x:Binding LabelText, Converter={StaticResource IsStringNotEmpty}}" BackgroundColor="{x:Binding LabelBackgroundColor}">
+                <components:Label x:Name="_fieldLabel" BindingContext="{x:Reference _timePickerField}" Text="{x:Binding LabelText}" TextColor="{x:Binding LabelTextColor}" FontSize="{x:Binding LabelFontSize}" Style="{x:StaticResource EntryLabelStyle}" />
+            </StackLayout>
+            <Frame x:Name="_timeFrame" HasShadow="False" Padding="0" BindingContext="{x:Reference _timePickerField}" BackgroundColor="{x:Binding TimeBackgroundColor}" BorderColor="{x:Binding TimeBorderColor}" CornerRadius="{x:Binding TimeCornerRadius}" IsClippedToBounds="True">
+                <Grid>
+                    <components:TimePicker Grid.Column="0" Grid.Row="0" x:Name="_timePicker" Focused="TimePickerFocusedEvent" Unfocused="TimePickerFocusedEvent" BindingContext="{x:Reference _timePickerField}" BackgroundColor="{x:Binding TimeBackgroundColor}" Time="{x:Binding Time}" Format="{x:Binding TimeFormat}" TextColor="{x:Binding TimeTextColor}" FontSize="{x:Binding TimePickerFontSize}" HeightRequest="{x:Binding HeightRequest}" WidthRequest="{x:Binding HeightRequest}" />
+                    <BoxView Grid.Column="0" Grid.Row="0" BindingContext="{x:Reference _timePickerField}" IsVisible="{x:Binding IsEnabled, Converter={x:StaticResource InversBool}}" HeightRequest="{x:Binding HeightRequest}" WidthRequest="{x:Binding HeightRequest}" />
+                </Grid>
+            </Frame>
+            <components:Label x:Name="_msgLabel" BindingContext="{x:Reference _timePickerField}" IsVisible="{x:Binding MsgText, Converter={StaticResource IsStringNotEmpty}}" Text="{x:Binding MsgText}" Margin="5" TextColor="{x:Binding MsgTextColor}" />
+        </StackLayout>
+    </components:TemplateView.Content>
+</components:TemplateView>

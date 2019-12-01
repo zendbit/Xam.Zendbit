@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<components:ModalPage x:Name="_imageViewerPage" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.ImageViewerPage" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components">
+    <components:ModalPage.ModalContent>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <Image Aspect="{x:Binding Aspect}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BindingContext="{x:Reference _imageViewerPage}" Source="{x:Binding Source}" />
+        </ScrollView>
+    </components:ModalPage.ModalContent>
+</components:ModalPage>

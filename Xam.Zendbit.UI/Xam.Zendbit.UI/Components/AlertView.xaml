@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<components:PopUpView x:Name="_alertView" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xam.Zendbit.UI.Components.AlertView" xmlns:components="clr-namespace:Xam.Zendbit.UI.Components" CornerRadius="5" Style="{x:StaticResource AlertViewStyle}">
+    <components:PopUpView.PopUpContent>
+        <StackLayout Padding="5">
+            <components:Label Margin="15" BindingContext="{x:Reference _alertView}" Text="{x:Binding ConfirmText}" TextColor="{x:Binding ConfirmTextColor}" HorizontalOptions="CenterAndExpand" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                <components:Button x:Name="_positiveButton" ClassId="_positiveButton" BindingContext="{x:Reference _alertView}" Text="{x:Binding PositiveButtonText}" TextColor="{x:Binding PositiveButtonTextColor}" BackgroundColor="{x:Binding PositiveButtonBackgroundColor}" CornerRadius="0" ButtonTappedCmd="{x:Binding ElmTappedCmd}" CommandParameter="{x:Reference _positiveButton}" Style="{x:StaticResource ButtonBackgroundColorBlue}" IsVisible="{x:Binding PositiveButtonText, Converter={StaticResource IsStringNotEmpty}}" />
+                <components:Button x:Name="_negativeButton" ClassId="_negativeButton" BindingContext="{x:Reference _alertView}" Text="{x:Binding NegativeButtonText}" TextColor="{x:Binding NegativeButtonTextColor}" BackgroundColor="{x:Binding NegativeButtonBackgroundColor}" CornerRadius="0" ButtonTappedCmd="{x:Binding ElmTappedCmd}" CommandParameter="{x:Reference _negativeButton}" Style="{x:StaticResource ButtonBackgroundColorRed}" IsVisible="{x:Binding NegativeButtonText, Converter={StaticResource IsStringNotEmpty}}" />
+            </StackLayout>
+        </StackLayout>
+    </components:PopUpView.PopUpContent>
+</components:PopUpView>
