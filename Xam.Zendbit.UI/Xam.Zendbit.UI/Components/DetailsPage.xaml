@@ -6,7 +6,6 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="{x:Binding PaddingOnPlafroms}" />
                     <RowDefinition Height="{x:Binding NavigationHeight}" />
-                    <RowDefinition Height="1" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <BoxView Grid.Column="0" Grid.Row="0" BindingContext="{x:Reference _detailsPage}" BackgroundColor="{x:Binding NavigationBackgroundColor}" />
@@ -20,8 +19,7 @@
                     <components:Label x:Name="_navigationTextLabel" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BindingContext="{x:Reference _detailsPage}" Text="{x:Binding NavigationText}" TextColor="{x:Binding NavigationTextColor}" FontSize="{x:Binding NavigationTextFontSize}" Style="{StaticResource NavigationTextStyle}" />
                     <ContentView HorizontalOptions="End" VerticalOptions="CenterAndExpand" BindingContext="{x:Reference _detailsPage}" Content="{x:Binding NavigationRightContent}" />
                 </StackLayout>
-                <components:HorizontalLine Grid.Column="0" Grid.Row="2" />
-                <ContentView Grid.Column="0" Grid.Row="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BindingContext="{x:Reference _detailsPage}" Content="{x:Binding DetailsContent}" />
+                <ContentView Grid.Column="0" Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BindingContext="{x:Reference _detailsPage}" Content="{x:Binding DetailsContent}" />
             </Grid>
             <Grid Grid.Column="0" Grid.Row="0" BindingContext="{x:Reference _detailsPage}" IsVisible="{Binding ToggleFlyout}">
                 <BoxView Grid.Column="0" Grid.Row="0" x:Name="_flyoutBgOverlay" ClassId="_flyoutBgOverlay" BindingContext="{x:Reference _detailsPage}" Style="{StaticResource FlyoutBackgroundOverlayStyle}">

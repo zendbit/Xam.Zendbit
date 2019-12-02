@@ -96,5 +96,13 @@ namespace Xam.Zendbit.UI.Components
                 typeof(TemplatePage),
                 null,
                 BindingMode.TwoWay);
+
+        public void ShowPopUp(View popUpContent, ICommand onPopUpClosedCmd = null)
+        {
+            TogglePopup = true;
+            PopUpContent = popUpContent;
+            if (onPopUpClosedCmd != null)
+                OnPopUpClosedCmd = onPopUpClosedCmd;
+        }
     }
 }

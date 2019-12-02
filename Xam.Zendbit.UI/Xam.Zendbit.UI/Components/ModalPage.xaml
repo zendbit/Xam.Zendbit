@@ -5,7 +5,6 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="{x:Binding PaddingOnPlafroms}" />
                 <RowDefinition Height="{x:Binding NavigationHeight}" />
-                <RowDefinition Height="1" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <BoxView Grid.Column="0" Grid.Row="0" BindingContext="{x:Reference _modalPage}" BackgroundColor="{x:Binding NavigationBackgroundColor}" />
@@ -19,8 +18,7 @@
                 <components:Label x:Name="_navigationTextLabel" Style="{StaticResource NavigationTextStyle}" BindingContext="{x:Reference _modalPage}" Text="{x:Binding NavigationText}" FontSize="{x:Binding NavigationTextFontSize}" TextColor="{x:Binding NavigationTextColor}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
                 <ContentView BindingContext="{x:Reference _modalPage}" Content="{x:Binding NavigationRightContent}" HorizontalOptions="End" VerticalOptions="CenterAndExpand" />
             </StackLayout>
-            <components:HorizontalLine Grid.Column="0" Grid.Row="2" />
-            <Grid Grid.Column="0" Grid.Row="3" VerticalOptions="FillAndExpand">
+            <Grid Grid.Column="0" Grid.Row="2" VerticalOptions="FillAndExpand">
                 <ContentView Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BindingContext="{x:Reference _modalPage}" Content="{x:Binding ModalContent}" />
                 <Frame Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" InputTransparent="True" Padding="10" Margin="15" HasShadow="False" CornerRadius="5" BackgroundColor="{x:Binding ActivityBackgroundColor}" BindingContext="{x:Reference _modalPage}" IsVisible="{x:Binding IsActivityRunning}">
                     <components:Label x:Name="_activityTextLabel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="{x:Binding ActivityTextColor}" BindingContext="{x:Reference _modalPage}" Text="{x:Binding ActivityText}" />

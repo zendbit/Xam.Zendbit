@@ -73,7 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Xam.Zendbit.UI\Xam.Zendbit.UI.csproj">
-      <Project>{7C7DD927-9963-4B64-A944-225CAAF661FE}</Project>
+      <Project>{F53C2371-0536-44C7-965C-5550823E6FBE}</Project>
       <Name>Xam.Zendbit.UI</Name>
     </ProjectReference>
   </ItemGroup>
